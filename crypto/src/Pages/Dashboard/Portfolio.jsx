@@ -18,14 +18,14 @@ const Portfolio = () => {
         lg: "row",
       }}
       align={{
-        base: "center",
+        base: "left",
         lg: "center",
       }}
     >
       <Stack>
-        <Text fontSize={"sm"}>
-          Total Portfolio Value{" "}
-          <Icon
+        <Text fontSize={"sm"} fontWeight={"semibold"} color={"black.60"}>
+          Total Portfolio Value 
+          <Icon ml={1}
             cursor={"pointer"}
             _hover={{
               color: "purple.400",
@@ -33,12 +33,12 @@ const Portfolio = () => {
             as={BsInfoCircleFill}
           />
         </Text>
-        <Text textStyle={"h4"}>Rs 112,312.24</Text>
+        <Text textStyle={"h4"} fontWeight={"bold"}>Rs 112,312.24</Text>
       </Stack>
       <Stack>
-        <Text fontSize={"sm"}>Wallet Balances</Text>
+        <Text fontSize={"sm"} fontWeight={"semibold"} color={"black.60"}>Wallet Balances</Text>
         <HStack>
-          <Text textStyle={"h4"}>22.39401000</Text>
+          <Text textStyle={"h4"} fontWeight={"bold"}>22.39401000</Text>
           <Text
             fontWeight={"semibold"}
             fontSize={"10px"}
@@ -51,7 +51,7 @@ const Portfolio = () => {
         </HStack>
       </Stack>
       <HStack mt={"6"}>
-        <Text textStyle={"h4"}>Rs 13000.00</Text>
+        <Text textStyle={"h4"} fontWeight={"bold"}>Rs 13000.00</Text>
         <Text
           fontWeight={"semibold"}
           fontSize={"10px"}
