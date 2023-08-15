@@ -17,7 +17,7 @@ const TopNav = ({title,btnRef,onOpen}) => {
       color: "purple.500",
     }} fontSize={"20px"} ref={btnRef} onClick={onOpen} display={{
       base:"block",
-      lg:"none",
+      xl:"none",
     }} as={FaBars} cursor={"pointer"}/>
       <Heading cursor={"pointer"} fontSize={"30px"}>{title}</Heading>
       <Menu>

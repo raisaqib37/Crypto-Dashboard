@@ -4,7 +4,7 @@ import { BiSolidDollarCircle } from 'react-icons/bi';
 
 const CardRight = () => {
   return (
-    <Stack ml={3} p={6} bg={"white"} mt={6} borderRadius={"xl"}>
+    <Stack  p={6} bg={"white"} mt={6} borderRadius={"xl"}>
         <Text fontSize={"sm"} fontWeight={"semibold"} color={"black.60"}>Recent Transactions</Text>
         <HStack justifyContent={"space-between"} mt={3} >
             <Icon as={BiSolidDollarCircle} borderRadius={"3xl"} bg={"black.10"} fontSize={"47px"} p={"8px"}/>

@@ -10,11 +10,11 @@ import CardDown from "./CardDown";
 const Dashboard = () => {
   return (
     <Layout title="Dashboard">
-      <Grid gridTemplateColumns={{
+      <Grid columnGap={"6"} gridTemplateColumns={{
         base: "repeat(1,1fr)",
         xl:"repeat(2,1fr)",
       }}>
-        <GridItem colSpan={{
+        <GridItem  colSpan={{
           base:"1",
           xl: "2"
         }}>

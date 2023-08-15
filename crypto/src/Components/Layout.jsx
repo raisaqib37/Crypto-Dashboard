@@ -12,14 +12,14 @@ const Layout = ({title,children}) => {
          <Flex>
             <Box display={{
                 base:"none",
-                lg:"block",
+                xl:"block",
             }} >
     <SideNav/>
             </Box>
             <DrawerExample btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
     <Box flexGrow={1}>
       <TopNav onOpen={onOpen} title={title}/>
-      <Container maxWidth={"70rem"} mt={6} borderRadius={"xl"}>
+      <Container overflowX={"hidden"} overflowY={"auto"}  maxWidth={"70rem"} mt={6} borderRadius={"xl"}>
         {children}
       </Container>
     </Box>
