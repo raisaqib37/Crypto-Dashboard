@@ -9,6 +9,7 @@ import {
 import { BiSolidDashboard } from "react-icons/bi";
 import { TbArrowsDoubleSwNe } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
+import { Link } from 'react-router-dom'
 const SideNav = () => {
   const NavLinks = [
     {
@@ -40,8 +41,8 @@ const SideNav = () => {
         </Heading>
         <Box px={"1"} mt={"6"}>
           {NavLinks.map((map) => (
+            <Link to={map.link} key={map.text}  >
             <HStack
-              key={map.text}
               cursor={"pointer"}
               color={"black.60"}
               fontWeight={"bold"}
@@ -57,12 +58,14 @@ const SideNav = () => {
               ml={"-55px"}
             >
               <Icon as={map.icon} />
-              <Text>{map.text}</Text>
+              <Text textDecoration={"none"}>{map.text}</Text>
             </HStack>
+            </Link>
           ))}
         </Box>
       </Box>
       <Box ml={"-70px"} mb={"30px"}>
+        <Link to={"/support"}>
         <HStack
           cursor={"pointer"}
           color={"black.60"}
@@ -72,8 +75,9 @@ const SideNav = () => {
           }}
         >
           <Icon as={BiSupport} />
-          <Text>Support</Text>
+          <Text textDecoration={"none"}>Support</Text>
         </HStack>
+        </Link>
       </Box>
     </Stack>
   );

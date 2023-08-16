@@ -1,9 +1,12 @@
 import React from 'react'
+import Layout from '../../Components/Layout';
 
 const Support = () => {
   return (
-    <div>Support</div>
+    <Layout title={"Support"}>
+      
+    </Layout>
   )
 }
 
-export default Support
+export default Support;
