@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "../../Components/Layout";
 import { Button, Card, Flex, Icon, Tag } from "@chakra-ui/react";
 import { FiDownload } from "react-icons/fi";
@@ -6,7 +5,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import TransactionTable from "./TransactionTable";
 
 const TransactionPage = () => {
-  const Tabs = [
+  const tabs = [
     {
       name: "All",
       count: 349,
@@ -35,7 +34,7 @@ const TransactionPage = () => {
       <Card>
         <Tabs>
           <TabList>
-            {Tabs.map((map) => (
+            {tabs.map((map) => (
               <Tab key={map.name}>
                 {map.name}
                 <Tag> {map.count} </Tag>
