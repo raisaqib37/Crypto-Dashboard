@@ -9,8 +9,14 @@ import {
 import { BiSolidDashboard } from "react-icons/bi";
 import { TbArrowsDoubleSwNe } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 const SideNav = () => {
+const location=useLocation();
+const isActiveLink  = (link) =>{
+  return location.pathname===link;
+}
+
+
   const NavLinks = [
     {
       text: "Dashboard",
@@ -43,8 +49,8 @@ const SideNav = () => {
           {NavLinks.map((map) => (
             <Link to={map.link} key={map.text}  >
             <HStack
+            mt={4}
               cursor={"pointer"}
-              color={"black.60"}
               fontWeight={"bold"}
               px={"55px"}
               py={"13px"}
@@ -52,9 +58,11 @@ const SideNav = () => {
               borderRadius={"lg"}
               _hover={{
                 color: "white",
-                bg: "purple.500",
+                bg: "purple.800",
                 transition: "0.2s ease-in",
               }}
+              bg={isActiveLink(map.link) ? "purple.800": "transparent"}
+              color={isActiveLink(map.link) ? "white": "black"}
               ml={"-55px"}
             >
               <Icon as={map.icon} />
@@ -68,11 +76,12 @@ const SideNav = () => {
         <Link to={"/support"}>
         <HStack
           cursor={"pointer"}
-          color={"black.60"}
+          color={isActiveLink("/support") ? "black": "black.80"}
           fontWeight={"bold"}
           _hover={{
             color: "black",
           }}
+
         >
           <Icon as={BiSupport} />
           <Text textDecoration={"none"}>Support</Text>

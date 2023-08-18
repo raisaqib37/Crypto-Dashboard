@@ -1,6 +1,6 @@
 import Layout from "../../Components/Layout";
-import { Button, Card, Flex, Icon, Tag } from "@chakra-ui/react";
-import { FiDownload } from "react-icons/fi";
+import { Button, Card, Flex, Icon, Input, InputGroup, InputLeftElement, Tag } from "@chakra-ui/react";
+import { FiDownload, FiSearch } from "react-icons/fi";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import TransactionTable from "./TransactionTable";
 
@@ -31,17 +31,32 @@ const TransactionPage = () => {
           Export CSV
         </Button>
       </Flex>
-      <Card>
+      <Card mt={3} boxShadow={"lg"}>
         <Tabs>
           <TabList>
             {tabs.map((map) => (
               <Tab key={map.name}>
                 {map.name}
-                <Tag> {map.count} </Tag>
+                <Tag p={"5px"} borderRadius={"xl"} ml={"1"}> {map.count} </Tag>
               </Tab>
             ))}
+            <InputGroup maxW={"200px"} ml={"24rem"}>
+            <InputLeftElement>
+            <Icon cursor={"pointer"} color={"purple.500"} fontSize={"16px"} as={FiSearch}/>
+            </InputLeftElement>
+            <Input type="text" placeholder="Search Here" bg={"white"} border={"none"}/>
+            </InputGroup>
           </TabList>
           <TabPanels>
+            <TabPanel>
+              <TransactionTable />
+            </TabPanel>
+            <TabPanel>
+              <TransactionTable />
+            </TabPanel>
+            <TabPanel>
+              <TransactionTable />
+            </TabPanel>
             <TabPanel>
               <TransactionTable />
             </TabPanel>
